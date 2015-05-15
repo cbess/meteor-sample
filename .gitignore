@@ -1,0 +1,5 @@
+.meteor
+zzz.ts-compiler.ts
+
+# ignore local config files
+local.*
