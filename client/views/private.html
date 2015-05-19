@@ -1,7 +1,22 @@
 <template name="private">
-  <div class="container">   
+  <div class="container">
     <div class="text-center">
-      <h1>This is private stuff!</h1>
+      <h1>My Entries</h1>
+    </div>
+
+    <p>
+      <form>
+          <div class="form-group">
+              <textarea id="entry-content" placeholder="Entry contents" class="form-control" rows="3"></textarea>
+          </div>
+          <button type="submit" class="save-entry btn btn-primary">Save</button>
+      </form>
+    </p>
+
+    <div class="entries">
+        {{#each myEntries}}
+            {{> entry}}
+        {{/each}}
     </div>
   </div>
 </template>

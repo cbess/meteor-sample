@@ -2,9 +2,27 @@
   <div class="container">
     <div class="text-center">
       <h1>Hello World!</h1>
-      
+
       <button>Increment</button>
       This increments {{counter}}.
     </div>
+
+    <p>
+        {{#if entries}}
+        <h3>User Entries</h3>
+        <div class="entries">
+            {{#each entries}}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h5 class="panel-title" title="{{createdAt}}">{{createdAtDisplay}}</h5>
+                </div>
+                <div class="panel-body">
+                    {{content}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
+    </p>
   </div>
 </template>

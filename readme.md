@@ -17,7 +17,6 @@ It uses:
 Run `setup.sh` to setup your environment.  
 The `.gitignore` ignores the `.meteor` directory. Make your own then remove the line.
 
-
 ## Conclusion
 
 Meteor 1.x+ is awesome. I may update this when I experiment or learn more.

@@ -14,3 +14,5 @@ meteor add coffeescript@1.0.6
 meteor add zimme:iron-router-active@1.0.4
 meteor add fourseven:scss@3.0.0
 meteor add twbs:bootstrap@3.3.4
+meteor add momentjs:moment@2.10.3
+meteor add dburles:collection-helpers@1.0.3
