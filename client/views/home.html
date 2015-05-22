@@ -14,6 +14,10 @@
             {{#each entries}}
             <div class="panel panel-default">
                 <div class="panel-heading">
+                    {{!--
+                        `createdAtDisplay` is from the Entry model
+                        `username` is from the template helper
+                    --}}
                     <h5 class="panel-title" title="{{createdAtDisplay}}">{{username}}</h5>
                 </div>
                 <div class="panel-body">

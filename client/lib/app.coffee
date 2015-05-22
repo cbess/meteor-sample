@@ -1,7 +1,6 @@
 # When you subscribe to a record set, it tells the server to
 # send records to the client.
 Meteor.subscribe 'entries'
-Meteor.subscribe 'usernames'
 
 # counter starts at 0
 Session.setDefault 'counter', 0
@@ -16,11 +15,12 @@ Template.home.helpers
 	entries: -> Entries.find({}) # all user entries
 	username: ->
 		# get the username for the entry
+		# we can get any username by userId because we published all of them
 		user = Meteor.users.findOne({_id: this.userId})
 		if user?
 			return user.username
 		else
-			return this.createdAtDisplay
+			return this.createdAtDisplay()
 
 ## Private
 

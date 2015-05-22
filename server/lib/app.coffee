@@ -3,10 +3,18 @@
 
 Meteor.publish 'entries', ->
 	# send all entries to client
-	Entries.find {}
+	[
+		Entries.find({})
+		,
+		usernamesCursor()
+	]
 
 Meteor.publish 'usernames', ->
-	# send the usernames to the client
+	# send all the usernames to the client
+	# because only the current user's info is available by default
+	usernamesCursor()
+
+usernamesCursor = ->
 	Meteor.users.find {},
 		fields:
 			username: 1
