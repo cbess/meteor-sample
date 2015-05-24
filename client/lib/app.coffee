@@ -16,7 +16,7 @@ Template.home.helpers
 	username: ->
 		# get the username for the entry
 		# we can get any username by userId because we published all of them
-		user = Meteor.users.findOne({_id: this.userId})
+		user = Meteor.users.findOne _id: this.userId
 		if user?
 			return user.username
 		else
