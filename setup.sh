@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # setup the meteor project
 
 meteor add meteor-platform@1.2.2
